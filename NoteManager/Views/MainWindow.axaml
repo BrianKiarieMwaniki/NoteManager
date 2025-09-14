@@ -1,0 +1,23 @@
+<Window 
+  x:Class="NoteManager.Views.MainWindow"
+  xmlns="https://github.com/avaloniaui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:vm="using:NoteManager.ViewModels"
+  mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+  x:DataType="vm:MainWindowViewModel"
+  ExtendClientAreaChromeHints="NoChrome"
+  ExtendClientAreaTitleBarHeightHint="-1"
+  ExtendClientAreaToDecorationsHint="True"
+  MinWidth="1024"
+  Title="NoteManager">
+  
+  <Design.DataContext>
+    <vm:MainWindowViewModel/>
+  </Design.DataContext>
+  
+  <StackPanel>
+    <TextBlock Text="{Binding Title}"/>  
+  </StackPanel>
+</Window>
