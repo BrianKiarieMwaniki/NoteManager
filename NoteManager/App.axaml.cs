@@ -1,13 +1,12 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-using Avalonia.Threading;
+using NoteManager.ApplicationBase.Services;
 using NoteManager.ApplicationBase.Views;
 using NoteManager.ViewModels;
 using NoteManager.Views;
 using Prism.DryIoc;
 using Prism.Ioc;
-using System;
 using System.Threading.Tasks;
 
 namespace NoteManager;
@@ -25,13 +24,15 @@ public partial class App : PrismApplication
         base.Initialize();
     }
 
-    public override void OnFrameworkInitializationCompleted()
+    public override async void OnFrameworkInitializationCompleted()
     {
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
+            await ShowSplashAsync();
+
             desktop.MainWindow = new MainWindow
             {
-                DataContext = new MainWindowViewModel()
+                DataContext = Container.Resolve<MainWindowViewModel>()
             };
         }
 
@@ -43,21 +44,8 @@ public partial class App : PrismApplication
     #region Protected Methods   
     protected override AvaloniaObject CreateShell()
     {
-        _splashWindow = SplashWindow.Instance;
-
-        Dispatcher.UIThread.Invoke(new Action(() => { _splashWindow.Show(); }));
-
-        var t = Task.Run(async delegate
-        {
-            await Task.Delay(2000);
-
-            return;
-        });
-        t.Wait();
-
-        _splashWindow.Close();
-
         var mainWindow = Container.Resolve<MainWindow>();
+
         return mainWindow;
     }
 
@@ -65,6 +53,23 @@ public partial class App : PrismApplication
     {
         // View - Generic
         containerRegistry.Register<MainWindow>();
+        containerRegistry.Register<MainWindowViewModel>();
+
+        containerRegistry.Register<ISplashWindow, SplashWindow>();
+        containerRegistry.RegisterSingleton<ISplashScreenService, SplashScreenService>();
     }
+
+
     #endregion Protected Methods   
+
+    #region Private Methods
+    private async Task ShowSplashAsync()
+    {
+        var splashScreenService = Container.Resolve<ISplashScreenService>();
+
+        await splashScreenService.ShowSplashAsync();
+    }
+
+    #endregion Private Methods   
+    
 }
