@@ -23,5 +23,7 @@ public interface ISplashWindow
     /// </summary>
     void Show();
 
+    void UpdateProgress(int progressValue);
+
     #endregion Public Methods
 }

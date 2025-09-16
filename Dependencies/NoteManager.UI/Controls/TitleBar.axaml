@@ -1,0 +1,102 @@
+<UserControl 
+  x:Class="NoteManager.UI.Controls.TitleBar"
+  xmlns="https://github.com/avaloniaui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:i="https://github.com/projektanker/icons.avalonia"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
+  mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450">
+
+  <UserControl.Styles>
+    <StyleInclude Source="avares://NoteManager.UI/Styles/All.axaml"/>
+  </UserControl.Styles>
+
+  <Grid Height="32">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto"/>
+      <ColumnDefinition Width="*"/>
+      <ColumnDefinition Width="Auto"/>
+    </Grid.ColumnDefinitions>
+
+    <Grid.Styles>
+      <Style Selector="Button">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+      </Style>
+    </Grid.Styles>
+
+    <!-- Left: Navigation -->
+    <Grid Grid.Column="0" Height="32">
+      <!-- Trapezium Shape -->
+      <Canvas Width="78" Height="32">
+        <Polygon Fill="#2563EB" Points="0,0 78,0 68,32 0,32"/>
+      </Canvas>
+      
+      <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+        <StackPanel.Styles>
+          <Style Selector="Button">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Width" Value="35"/>
+            <Setter Property="Height" Value="32"/>
+            <Setter Property="Foreground" Value="White"/>
+          </Style>
+        </StackPanel.Styles>
+        <Button 
+          Classes="titleBar-btn"
+          i:Attached.Icon="mdi-arrow-left" />
+        <Button 
+          Classes="titleBar-btn"
+          i:Attached.Icon="mdi-arrow-right"/>
+      </StackPanel>
+    </Grid>
+
+    <!-- Center: Title --> 
+      <TextBlock 
+        Grid.Column="1"        
+        Text="{Binding Title}"
+        TextAlignment="Center"
+        FontSize="16"
+        Foreground="#383838"
+        FontWeight="SemiBold"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+        PointerPressed="TitleStr_PointerPressed"/>
+
+    <!-- Right: Window Controls -->
+    <Grid Grid.Column="2">
+      <!-- Trapezium Shape -->
+      <Canvas Width="110" Height="32">
+        <Polygon Fill="#2563EB" Points="0,0 110,0 110,32 10,32"/>
+      </Canvas>
+      
+      <StackPanel Orientation="Horizontal" VerticalAlignment="Center"
+                  HorizontalAlignment="Right">
+        <StackPanel.Styles>
+          <Style Selector="Button">
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="Width" Value="32"/>
+            <Setter Property="Height" Value="32"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Foreground" Value="White"/>
+          </Style>
+        </StackPanel.Styles>
+        
+        <Button
+          x:Name="MinimizeBtn"
+          Classes="titleBar-btn"
+          i:Attached.Icon="fa-solid fa-window-minimize"
+          VerticalContentAlignment="Bottom"/>
+        <Button 
+          x:Name="MaximizeBtn"
+          Classes="titleBar-btn"
+          i:Attached.Icon="fa-regular fa-square" />
+        <Button 
+          x:Name="CloseBtn"
+          Classes="app-close"
+          i:Attached.Icon="fa-xmark"/>
+      </StackPanel>
+    </Grid>
+  </Grid>
+  
+</UserControl>

@@ -15,13 +15,13 @@
   mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="400">
 
   <Grid
-    RowDefinitions="Auto,Auto">
+    RowDefinitions="*,Auto">
 
     <!--Icon-->
 
     <!--Title & Intro-->
     <StackPanel
-      Grid.Row="1"
+      Grid.Row="0"
       HorizontalAlignment="Center"
       VerticalAlignment="Center"
       Spacing="10">
@@ -35,6 +35,12 @@
         FontSize="14"
         HorizontalAlignment="Center"/>
     </StackPanel>
-
+    
+  <!--Progress Bar-->
+    <ProgressBar 
+      Grid.Row="1"
+      HorizontalAlignment="Stretch"
+      CornerRadius="0"
+      Value="{Binding Progress}"/>
   </Grid>
 </Window>
