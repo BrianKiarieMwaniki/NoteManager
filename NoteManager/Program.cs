@@ -1,5 +1,9 @@
 ﻿using System;
 using Avalonia;
+using Avalonia.ReactiveUI;
+using Projektanker.Icons.Avalonia;
+using Projektanker.Icons.Avalonia.FontAwesome;
+using Projektanker.Icons.Avalonia.MaterialDesign;
 
 namespace NoteManager
 {
@@ -14,9 +18,16 @@ namespace NoteManager
 
         // Avalonia configuration, don't remove; also used by visual designer.
         public static AppBuilder BuildAvaloniaApp()
-            => AppBuilder.Configure<App>()
-                .UsePlatformDetect()
-                .WithInterFont()
-                .LogToTrace();
+        {
+            IconProvider.Current
+                .Register<FontAwesomeIconProvider>()
+                .Register<MaterialDesignIconProvider>();
+
+            return AppBuilder.Configure<App>()
+                   .UsePlatformDetect()
+                   .WithInterFont()
+                   //.UseReactiveUI()
+                   .LogToTrace();
+        }
     }
 }

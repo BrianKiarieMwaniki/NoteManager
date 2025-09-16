@@ -9,6 +9,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Base Assemblies", "Base Ass
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteManager.ApplicationBase", "Base Assemblies\NoteManager.ApplicationBase\NoteManager.ApplicationBase.csproj", "{1B09B072-63F3-4B50-BAEC-039C94344EBA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dependencies", "Dependencies", "{9D0703AE-8158-4AEC-A3B4-8B9FD5780B08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteManager.UI", "Dependencies\NoteManager.UI\NoteManager.UI.csproj", "{7EE4C316-9976-41B2-852E-8E171D86C3B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,12 +27,17 @@ Global
 		{1B09B072-63F3-4B50-BAEC-039C94344EBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B09B072-63F3-4B50-BAEC-039C94344EBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B09B072-63F3-4B50-BAEC-039C94344EBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EE4C316-9976-41B2-852E-8E171D86C3B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EE4C316-9976-41B2-852E-8E171D86C3B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EE4C316-9976-41B2-852E-8E171D86C3B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EE4C316-9976-41B2-852E-8E171D86C3B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1B09B072-63F3-4B50-BAEC-039C94344EBA} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{7EE4C316-9976-41B2-852E-8E171D86C3B1} = {9D0703AE-8158-4AEC-A3B4-8B9FD5780B08}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {90BC96A2-6B22-48A6-82CC-734A52B4597C}

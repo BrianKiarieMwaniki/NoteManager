@@ -5,19 +5,28 @@
   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
   xmlns:vm="using:NoteManager.ViewModels"
+  xmlns:controls="using:NoteManager.UI.Controls"
   mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
   x:DataType="vm:MainWindowViewModel"
   ExtendClientAreaChromeHints="NoChrome"
-  ExtendClientAreaTitleBarHeightHint="-1"
   ExtendClientAreaToDecorationsHint="True"
+  WindowStartupLocation="CenterScreen"
   MinWidth="1024"
   Title="NoteManager">
   
   <Design.DataContext>
     <vm:MainWindowViewModel/>
   </Design.DataContext>
-  
-  <StackPanel>
-    <TextBlock Text="{Binding Title}"/>  
-  </StackPanel>
+
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    
+    <!--Title Bar-->
+    <controls:TitleBar 
+      Grid.Row="0"
+      Title="{Binding Title}"/>
+  </Grid>
 </Window>
