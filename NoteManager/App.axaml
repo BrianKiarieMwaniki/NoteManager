@@ -1,10 +1,39 @@
-<Application xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             x:Class="NoteManager.App"
-             RequestedThemeVariant="Default">
-             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+<Application 
+  xmlns="https://github.com/avaloniaui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  x:Class="NoteManager.App"
+  RequestedThemeVariant="Default">           
 
-    <Application.Styles>
-        <FluentTheme />
-    </Application.Styles>
+  <Application.Styles>
+      <FluentTheme>        
+      </FluentTheme>
+  </Application.Styles>
+  <Application.Resources>
+    <FontFamily x:Key="NotoSansDisplay">avares://NoteManager/Assets/Fonts#Noto Sans Display</FontFamily>
+    <!-- Colors -->
+    <Color x:Key="PrimaryColor">#2F80ED</Color>
+    <Color x:Key="PrimaryColorLight">#56A2F5</Color>
+    <Color x:Key="PrimaryColorDark">#1B5CBF</Color>
+    <Color x:Key="SecondaryColor">#4F4F4F</Color>
+    <Color x:Key="AccentColor">#27AE60</Color>
+
+    <!-- Brushes -->
+    <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource PrimaryColor}" />
+    <SolidColorBrush x:Key="SecondaryBrush" Color="{StaticResource SecondaryColor}" />
+    <SolidColorBrush x:Key="AccentBrush" Color="{StaticResource AccentColor}" />  
+    
+    <!--Gradients-->
+    <LinearGradientBrush x:Key="BackgroundGradient" StartPoint="0%, 0%" EndPoint="100%, 100%">
+      <GradientStop Color="{StaticResource PrimaryColorDark}" Offset="0"/>
+      <GradientStop Color="{StaticResource PrimaryColor}" Offset="0.5"/>
+      <GradientStop Color="{StaticResource PrimaryColorLight}" Offset="0.75"/>
+    </LinearGradientBrush>
+  </Application.Resources>
+
+  <Application.Styles>
+    <Style Selector="TextBlock">
+      <Setter Property="FontFamily" Value="{StaticResource NotoSansDisplay}"/>
+      <Setter Property="Foreground" Value="{StaticResource SecondaryColor}"/>
+    </Style>
+  </Application.Styles>
 </Application>

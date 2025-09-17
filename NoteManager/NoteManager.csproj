@@ -8,6 +8,41 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <AvaloniaResource Include="Assets\Fonts\*" />
+    <AvaloniaResource Include="Assets\Icons\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Fonts\NotoSansDisplay-Bold.ttf" />
+    <None Remove="Assets\Fonts\NotoSansDisplay-BoldItalic.ttf" />
+    <None Remove="Assets\Fonts\NotoSansDisplay-Italic.ttf" />
+    <None Remove="Assets\Fonts\NotoSansDisplay-Light.ttf" />
+    <None Remove="Assets\Fonts\NotoSansDisplay-LightItalic.ttf" />
+    <None Remove="Assets\Fonts\NotoSansDisplay-Medium.ttf" />
+    <None Remove="Assets\Fonts\NotoSansDisplay-MediumItalic.ttf" />
+    <None Remove="Assets\Fonts\NotoSansDisplay-Regular.ttf" />
+    <None Remove="Assets\Fonts\NotoSansDisplay-SemiBold.ttf" />
+    <None Remove="Assets\Fonts\NotoSansDisplay-SemiBoldItalic.ttf" />
+    <None Remove="Assets\Fonts\NotoSansDisplay-Thin.ttf" />
+    <None Remove="Assets\Fonts\NotoSansDisplay-ThinItalic.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AvaloniaResource Include="Assets\Fonts\NotoSansDisplay-Bold.ttf" />
+    <AvaloniaResource Include="Assets\Fonts\NotoSansDisplay-BoldItalic.ttf" />
+    <AvaloniaResource Include="Assets\Fonts\NotoSansDisplay-Italic.ttf" />
+    <AvaloniaResource Include="Assets\Fonts\NotoSansDisplay-Light.ttf" />
+    <AvaloniaResource Include="Assets\Fonts\NotoSansDisplay-LightItalic.ttf" />
+    <AvaloniaResource Include="Assets\Fonts\NotoSansDisplay-Medium.ttf" />
+    <AvaloniaResource Include="Assets\Fonts\NotoSansDisplay-MediumItalic.ttf" />
+    <AvaloniaResource Include="Assets\Fonts\NotoSansDisplay-Regular.ttf" />
+    <AvaloniaResource Include="Assets\Fonts\NotoSansDisplay-SemiBold.ttf" />
+    <AvaloniaResource Include="Assets\Fonts\NotoSansDisplay-SemiBoldItalic.ttf" />
+    <AvaloniaResource Include="Assets\Fonts\NotoSansDisplay-Thin.ttf" />
+    <AvaloniaResource Include="Assets\Fonts\NotoSansDisplay-ThinItalic.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Avalonia" Version="11.3.6" />
     <PackageReference Include="Avalonia.Desktop" Version="11.3.6" />
     <PackageReference Include="Avalonia.ReactiveUI" Version="11.3.6" />

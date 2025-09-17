@@ -12,6 +12,7 @@
   ExtendClientAreaToDecorationsHint="True"
   WindowStartupLocation="CenterScreen"
   MinWidth="1024"
+  Icon="/Assets/Icons/icon.ico"
   Title="NoteManager">
   
   <Design.DataContext>

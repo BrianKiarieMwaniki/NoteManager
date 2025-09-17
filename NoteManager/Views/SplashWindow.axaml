@@ -12,12 +12,12 @@
   Width="600"
   Height="400"
   CornerRadius="0"
+  Icon="/Assets/Icons/icon.ico"
   mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="400">
 
   <Grid
-    RowDefinitions="*,Auto">
-
-    <!--Icon-->
+    RowDefinitions="*,Auto"
+    Background="{StaticResource BackgroundGradient}">   
 
     <!--Title & Intro-->
     <StackPanel
@@ -25,13 +25,29 @@
       HorizontalAlignment="Center"
       VerticalAlignment="Center"
       Spacing="10">
+      <StackPanel.Styles>
+        <Style Selector="TextBlock">
+          <Setter Property="Foreground" Value="White"/>
+        </Style>
+      </StackPanel.Styles>
+      
+      <!--Icon-->
+      <Image
+        Source="/Assets/Icons/icon-512x512.png"
+        Width="75"
+        Height="75"
+        VerticalAlignment="Bottom"/>
+      
+      <!--Title-->
       <TextBlock
         Text="Note Manager"
         FontSize="24"
         FontWeight="Bold"
         HorizontalAlignment="Center"/>
+      
+      <!--Slogan-->
       <TextBlock
-        Text="Loading, please wait..."
+        Text="Capture. Organize. Focus."
         FontSize="14"
         HorizontalAlignment="Center"/>
     </StackPanel>
@@ -41,6 +57,8 @@
       Grid.Row="1"
       HorizontalAlignment="Stretch"
       CornerRadius="0"
+      Background="{StaticResource PrimaryColorLight}"
+      Foreground="White"
       Value="{Binding Progress}"/>
   </Grid>
 </Window>
