@@ -25,7 +25,7 @@ namespace NoteManager
 
             return AppBuilder.Configure<App>()
                    .UsePlatformDetect()
-                   .WithInterFont()
+                   .WithNotoSansDisplayFont()
                    //.UseReactiveUI()
                    .LogToTrace();
         }

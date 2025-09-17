@@ -57,8 +57,8 @@
         Text="{Binding Title}"
         TextAlignment="Center"
         FontSize="16"
+        FontWeight="Bold"
         Foreground="#383838"
-        FontWeight="SemiBold"
         HorizontalAlignment="Center"
         VerticalAlignment="Center"
         PointerPressed="TitleStr_PointerPressed"/>
