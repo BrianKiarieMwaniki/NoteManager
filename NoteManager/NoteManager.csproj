@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <AvaloniaResource Include="Assets\Fonts\*" />
+    <AvaloniaResource Include="Assets\Icons\*" />
   </ItemGroup>
 
   <ItemGroup>
