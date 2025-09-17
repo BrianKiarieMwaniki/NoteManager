@@ -5,7 +5,7 @@
   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
   xmlns:i="https://github.com/projektanker/icons.avalonia"
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
-  mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450">
+  mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="450">
 
   <UserControl.Styles>
     <StyleInclude Source="avares://NoteManager.UI/Styles/All.axaml"/>
@@ -30,7 +30,7 @@
     <Grid Grid.Column="0" Height="32">
       <!-- Trapezium Shape -->
       <Canvas Width="78" Height="32">
-        <Polygon Fill="#2563EB" Points="0,0 78,0 68,32 0,32"/>
+        <Polygon Fill="{StaticResource PrimaryColor}" Points="0,0 78,0 68,32 0,32"/>
       </Canvas>
       
       <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
@@ -58,7 +58,6 @@
         TextAlignment="Center"
         FontSize="16"
         FontWeight="Bold"
-        Foreground="#383838"
         HorizontalAlignment="Center"
         VerticalAlignment="Center"
         PointerPressed="TitleStr_PointerPressed"/>
@@ -67,7 +66,7 @@
     <Grid Grid.Column="2">
       <!-- Trapezium Shape -->
       <Canvas Width="110" Height="32">
-        <Polygon Fill="#2563EB" Points="0,0 110,0 110,32 10,32"/>
+        <Polygon Fill="{StaticResource PrimaryColor}" Points="0,0 110,0 110,32 10,32"/>
       </Canvas>
       
       <StackPanel Orientation="Horizontal" VerticalAlignment="Center"

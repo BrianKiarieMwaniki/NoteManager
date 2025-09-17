@@ -15,7 +15,8 @@
   mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="400">
 
   <Grid
-    RowDefinitions="*,Auto">
+    RowDefinitions="*,Auto"
+    Background="{StaticResource BackgroundGradient}">
 
     <!--Icon-->
 
@@ -25,6 +26,11 @@
       HorizontalAlignment="Center"
       VerticalAlignment="Center"
       Spacing="10">
+      <StackPanel.Styles>
+        <Style Selector="TextBlock">
+          <Setter Property="Foreground" Value="White"/>
+        </Style>
+      </StackPanel.Styles>
       <TextBlock
         Text="Note Manager"
         FontSize="24"
@@ -41,6 +47,8 @@
       Grid.Row="1"
       HorizontalAlignment="Stretch"
       CornerRadius="0"
+      Background="{StaticResource PrimaryColorLight}"
+      Foreground="White"
       Value="{Binding Progress}"/>
   </Grid>
 </Window>
