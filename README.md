@@ -4,8 +4,8 @@
 
 ### Splash Screen
 
-![Windows Version](Documents/screenshots/note-manager-splash-screen.png.png)
+![Windows Version](Documents/screenshots/note-manager-splash-screen.png)
 
 ### Main Window
 
-![macOS Version](Documents/screenshots/note-manager-shell.png.png)
+![macOS Version](Documents/screenshots/note-manager-shell.png)
